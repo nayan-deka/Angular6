@@ -1,0 +1,6 @@
+1. Open the browser and type localhost:4200
+2. Browser downloads index.html which in turn downloads style bundle, vendor bundle
+and main.js bundle
+3. main.js is bootstrapping  appmodule which contains metadata .(BrowserModule)
+4. <app-root> will be processed and AppComponent
+will be instantiated which will render templateUrl and CSS

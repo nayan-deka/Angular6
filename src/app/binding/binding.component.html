@@ -1,0 +1,30 @@
+<div>
+    <h3 [style.color]="titleStyle">Binding in Angular</h3>
+<br/>
+<button [disabled]="buttonStatus"
+        (click)="Save($event)">
+        Enroll for the course
+</button>
+<h3 class="mycolor">
+    Click the Framework to enroll
+</h3>
+<br />
+<li *ngFor="let item of items;" (click)="onItemClicked(item)">
+    {{item.name}}
+</li>
+<div *ngIf="clicked; then show else warn"></div>
+<ng-template #show>
+    You have selected : 
+    <input type="text" [(ngModel)]="clickedItem.name" />  
+</ng-template>
+
+<ng-template #warn>
+    <h4 class="text-danger">
+        Select your framework
+    </h4>
+</ng-template>
+<div class="bg-success">
+    <app-news></app-news>
+</div>
+
+</div>

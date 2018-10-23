@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+h3{
+    background: grey;
+    color: gold;
+    border: 1px solid;
+    border-radius: 30px;
+    text-align: center
+}
