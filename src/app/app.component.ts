@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, ViewContainerRef } from '@angular/core';
+import { Service } from './dynamic/service.loader';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title ='app';
+  constructor(public service:Service,
+    @Inject(ViewContainerRef) viewContainerRef) {
+      service.setRootViewContainer(viewContainerRef)
+      service.addDynamicComponent()
+    }
 }
 
