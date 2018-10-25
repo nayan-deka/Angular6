@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -17,18 +17,19 @@ import { Service } from './dynamic/service.loader';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { HttpClientModule } from '@angular/common/http'
 import { HTTPComponent } from './http2angular/http.component';
+import { WeatherComponent } from './http2angular/weather.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,HeaderComponent,FooterComponent, InvoiceComponent, 
-    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent
+    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent,WeatherComponent
   ],
   imports: [
     BrowserModule,FormsModule,BindingModule,
     IOModule,ViewChildModule,DIModule,ContactModule,
-    HttpClientModule
+    HttpClientModule, ReactiveFormsModule
   ],
   providers: [Service],
   entryComponents: [DynamicComponent],
