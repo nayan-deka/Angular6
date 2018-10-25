@@ -18,18 +18,21 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { HttpClientModule } from '@angular/common/http'
 import { HTTPComponent } from './http2angular/http.component';
 import { WeatherComponent } from './http2angular/weather.component';
+import { HomeComponent } from './home/home.component';
+import { NotifyComponent } from './notify.component';
+import { routing } from './app.routing';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,HeaderComponent,FooterComponent, InvoiceComponent, 
-    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent,WeatherComponent
+    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent,WeatherComponent,HomeComponent,NotifyComponent
   ],
   imports: [
     BrowserModule,FormsModule,BindingModule,
     IOModule,ViewChildModule,DIModule,ContactModule,
-    HttpClientModule, ReactiveFormsModule
+    HttpClientModule, ReactiveFormsModule, routing
   ],
   providers: [Service],
   entryComponents: [DynamicComponent],
