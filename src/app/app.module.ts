@@ -21,18 +21,20 @@ import { WeatherComponent } from './http2angular/weather.component';
 import { HomeComponent } from './home/home.component';
 import { NotifyComponent } from './notify.component';
 import { routing } from './app.routing';
+import { SharedModule } from './shared/share.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,HeaderComponent,FooterComponent, InvoiceComponent, 
-    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent,WeatherComponent,HomeComponent,NotifyComponent
+    CompLifeCycleComponent,ChildComponent,DynamicComponent,HTTPComponent,
+    WeatherComponent,HomeComponent,NotifyComponent
   ],
   imports: [
     BrowserModule,FormsModule,BindingModule,
     IOModule,ViewChildModule,DIModule,ContactModule,
-    HttpClientModule, ReactiveFormsModule, routing
+    HttpClientModule, ReactiveFormsModule, routing,SharedModule
   ],
   providers: [Service],
   entryComponents: [DynamicComponent],
